@@ -55,3 +55,22 @@ cmd---> docker run -it node </br>
 Snippet--> </br>
 Digest: sha256:52bda4c171f379c1dcba5411d18ed83ae6e99c3751cad67a450684efb9491f6b
 Status: Downloaded newer image for node:latest
+
+### Custom Images
+
+Node JS App
+
+<h4>Docker File :</h4>
+
+<ul>
+<li>FROM node ---> base image instruction</li>
+<li>WORKDIR /app --->working directory in image</li>
+<li>COPY . /app ---> copy all code file to working dir</li>
+<li>RUN npm install ---> command to install node dependencies in image</li>
+<li>CMD [ "node", "server.js" ] ---> command to run app in container not in image</li>
+</ul>
+Commands to build and run node js app image/container
+<ul>
+<li>docker build .</li>
+<li>docker run -p 80:80 imageId</li>
+</ul>
