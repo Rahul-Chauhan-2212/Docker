@@ -35,5 +35,23 @@ If your admin account is different to your user account, you must add the user t
 <li>docker build .   ---> To build docker image of the app</li>
 <li>docker run -p portId:portId imageId ---> To run docker image on the given port</li>
 <li>docker ps  ---> To list down the docker images running </li>
+<li>docker ps -a  ---> to list down all the docker instances stopped or running</li>
 <li>docker stop containerName  ---> To stop docker image/container</li>
 </ul>
+
+### Images vs Containers
+
+Containers--> The running "unit of software" / running instance of Image
+Multiple containers can be created based on one image
+Images--> Templates of containers / contains code and required tools and runtime environment
+
+##### Pre-Built Images
+
+Docker Hub
+example: node image at docker hub
+cmd---> docker run -it node </br>
+
+<h4>-it</h4> <span>to open node interractive shell</span></br>
+Snippet--> </br>
+Digest: sha256:52bda4c171f379c1dcba5411d18ed83ae6e99c3751cad67a450684efb9491f6b
+Status: Downloaded newer image for node:latest
