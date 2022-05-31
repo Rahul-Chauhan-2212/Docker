@@ -78,3 +78,9 @@ Commands to build and run node js app image/container
 #### Image Layers
 
 Each Command in Docker File creates a cacheable image layers. So we should be very specific to run commands in manner which have changes from very frequent to less frequent. So that the caching can be used properly and decrease the image build time.
+
+### Stopping and Restarting Containers
+
+docker run imageId --->creates and run new container
+docker stop imageName ---> stop docker container
+docker start imageName ---> run stopped container
