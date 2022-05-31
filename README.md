@@ -74,3 +74,7 @@ Commands to build and run node js app image/container
 <li>docker build .</li>
 <li>docker run -p 80:80 imageId</li>
 </ul>
+
+#### Image Layers
+
+Each Command in Docker File creates a cacheable image layers. So we should be very specific to run commands in manner which have changes from very frequent to less frequent. So that the caching can be used properly and decrease the image build time.
