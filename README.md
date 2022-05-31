@@ -84,3 +84,11 @@ Each Command in Docker File creates a cacheable image layers. So we should be ve
 docker run imageId --->creates and run new container
 docker stop imageName ---> stop docker container
 docker start imageName ---> run stopped container
+
+### Attached and Detached Containers
+
+docker run cmd run in attached mode which means the command prompt will be attached with the container which will show any console log on the same terminal.
+docker start cmd run in detached mode.
+
+<i>docker run -p 8080:80 -d imageId</i>
+-d is used to run the docker run cmd in detached mode.
