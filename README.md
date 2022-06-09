@@ -124,4 +124,9 @@ Note:Only that image can be deleted which is not attached to any running or stop
 
 To Delete all the unused Docker Images
 
-<h5>docker images prune</h5>
+<h5>docker image prune</h5>
+
+### Automatically delete the stopped containers
+
+<h5>docker run -p 3000:80 -d --rm imageId</h5>
+Here --rm does this trick. One the containers is stopped it is automatically deleted
