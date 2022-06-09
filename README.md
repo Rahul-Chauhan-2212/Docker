@@ -133,4 +133,14 @@ To Delete all the unused Docker Images
 <h5>docker run -p 3000:80 -d --rm imageId</h5>
 Here --rm does this trick. One the containers is stopped it is automatically deleted
 
+### Inspecting Images
+
+<h5>docker image inspect imageId</h5>
+
+### Copy Files to Running Container and vice-versa
+
+<h5>docker cp test/ admiring_kalam:/test</h5>
+<h5>docker cp admiring_kalam:/test .</h5>
+<h5>docker cp admiring_kalam:/test/copy.txt .</h5>
+
 </i>
