@@ -109,3 +109,19 @@ docker start -a containerId this command also not works correctly
 
 <h5>docker start -a -i containerId</h5>
 so -i serves as run containers in interactive mode
+
+#### Deleting Images and containers
+
+<h5>docker rm containerId</h5> 
+Note: Container should be in stopped mode for this command</br>
+To List down docker images
+<h5>docker images<h5>
+
+To delete Docker images
+
+<h5>docker rmi imageId</h5>
+Note:Only that image can be deleted which is not attached to any running or stopped container.So first have to delete containers then image.</br>
+
+To Delete all the unused Docker Images
+
+<h5>docker images prune</h5>
