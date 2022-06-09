@@ -91,4 +91,21 @@ docker run cmd run in attached mode which means the command prompt will be attac
 docker start cmd run in detached mode.
 
 <i>docker run -p 8080:80 -d imageId</i>
--d is used to run the docker run cmd in detached mode.
+-d is used to run the docker run cmd in detached mode.</br>
+
+To attach to the already running detached container
+<i>docker attach imageId<i>
+or
+<i>docker logs -f imageId</i>
+
+### Entering Interactive Mode
+
+example: python-app-docker </br>
+docker run imageId command Fails here</br>
+
+<h5>docker run -it imageId</h5>
+
+docker start -a containerId this command also not works correctly
+
+<h5>docker start -a -i containerId</h5>
+so -i serves as run containers in interactive mode
