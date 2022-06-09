@@ -1,3 +1,4 @@
+<i>
 # Docker
 
 ### Docker is a container management service. The keywords of Docker are develop, ship and run anywhere. The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
@@ -90,13 +91,14 @@ docker start imageName ---> run stopped container
 docker run cmd run in attached mode which means the command prompt will be attached with the container which will show any console log on the same terminal.
 docker start cmd run in detached mode.
 
-<i>docker run -p 8080:80 -d imageId</i>
+<h5>docker run -p 8080:80 -d imageId</h5>
 -d is used to run the docker run cmd in detached mode.</br>
 
 To attach to the already running detached container
-<i>docker attach imageId<i>
+
+<h5>docker attach imageId</h5>
 or
-<i>docker logs -f imageId</i>
+<h5>docker logs -f imageId</h5>
 
 ### Entering Interactive Mode
 
@@ -130,3 +132,5 @@ To Delete all the unused Docker Images
 
 <h5>docker run -p 3000:80 -d --rm imageId</h5>
 Here --rm does this trick. One the containers is stopped it is automatically deleted
+
+</i>
