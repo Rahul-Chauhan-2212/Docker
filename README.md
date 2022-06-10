@@ -143,4 +143,23 @@ Here --rm does this trick. One the containers is stopped it is automatically del
 <h5>docker cp admiring_kalam:/test .</h5>
 <h5>docker cp admiring_kalam:/test/copy.txt .</h5>
 
+### Naming and Tagging Images and Containers
+
+Containers Naming</br>
+
+<h5>docker run -d -p 80:80 --name containerName imageId</h5> 
+--name name is used to give a name to container</br>
+Images Naming and Tagging</br>
+<h5>docker build -t repoName:tag .</h5>
+Tag an image referenced by ID</br>
+To tag a local image with ID “0e5574283393” into the “fedora” repository with “version1.0”:</br>
+<h5>docker tag 0e5574283393 fedora/httpd:version1.0</h5>
+Tag an image referenced by Name</br>
+To tag a local image with name “httpd” into the “fedora” repository with “version1.0”:</br>
+<h5>docker tag httpd fedora/httpd:version1.0</h5>
+Note that since the tag name is not specified, the alias is created for an existing local version httpd:latest.</br>
+Tag an image referenced by Name and Tag</br>
+To tag a local image with name “httpd” and tag “test” into the “fedora” repository with “version1.0.test”:</br>
+<h5>docker tag httpd:test fedora/httpd:version1.0.test</h5>
+
 </i>
