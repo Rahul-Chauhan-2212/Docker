@@ -1,0 +1,15 @@
+docker build .
+docker run -p 3000:3000 imageid
+docker run -p 3000:3000 --name containername imageid
+docker stop containername
+docker start containername
+docker rm containername/ docker rm --force containername
+docker rmi imageid
+docker build -t reponame:tag .
+docker run -p 3000:3000 -d --rm --name containername reponame:tag
+
+extra commands->
+docker images
+docker ps 
+docker ps -a
+

@@ -1,0 +1,14 @@
+docker build .
+docker run -it imageid
+docker run -it --name containername imageid
+docker stop containername
+docker start -ai containername
+docker rm containername
+docker rmi imageid
+docker build -t reponame:tag .
+docker run -it --rm --name containername reponame:tag
+
+extracommand
+docker images
+docker ps
+docker ps -a
