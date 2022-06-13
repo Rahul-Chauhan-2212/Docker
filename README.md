@@ -126,7 +126,7 @@ Note:Only that image can be deleted which is not attached to any running or stop
 
 To Delete all the unused Docker Images
 
-<h5>docker image prune</h5>
+<h5>docker image prune -a</h5>
 
 ### Automatically delete the stopped containers
 
@@ -162,4 +162,17 @@ Tag an image referenced by Name and Tag</br>
 To tag a local image with name “httpd” and tag “test” into the “fedora” repository with “version1.0.test”:</br>
 <h5>docker tag httpd:test fedora/httpd:version1.0.test</h5>
 
+### Pushing Images to DockerHub
+
+Create Docker repo in DockerHub</br>
+rchauhan9102/node-app
+
+<h5>docker tag oldname docker reponame</h5>
+<h5>docker login</h5>
+<h5>docker push reponame</h5>
+<h5>docker logout</h5>
+
+### Pulling Images from DockerHub
+
+<h5>docker pull dockerimagename</h5>
 </i>
