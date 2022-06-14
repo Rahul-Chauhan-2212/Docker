@@ -175,4 +175,15 @@ rchauhan9102/node-app
 ### Pulling Images from DockerHub
 
 <h5>docker pull dockerimagename</h5>
+
+## Managing Data and Working with Volumes
+
+Image ---> READ ONLY Container ---> READ/WRITE
+
+#### Different Kinds of Data
+
+1)Application(Code+environment) --->Fixed(Stored in Image)</br>
+2)Temprory App Data(i.e. entered user data) ---> Variable(Stored in Containers)</br>
+3)Permanent App Data(i.e. User Accounts) ---> Must not be lost when containers restarts(Stored in Volumes)
+
 </i>
