@@ -238,6 +238,9 @@ it is a volume inside your local machine which watches the changes inside the fo
 <td>docker run -v data:/app/data</td>
 <td>docker run -v path/to/code:/app/data</td>
 </tr>
+<tr><td>Created specifically for single container</td></tr>
+<tr><td>Survives container shutdown/restarts until --rm is used</td></tr>
+<tr><td>Can not be shared across containers</td></tr>
 </table>
 
 </i>
