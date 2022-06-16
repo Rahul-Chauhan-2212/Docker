@@ -225,4 +225,19 @@ it is a volume inside your local machine which watches the changes inside the fo
 
 <h5>docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app" -v /app/node_modules feedback-node:volume</h5>
 
+##### Volumes Comparison
+
+<table>
+<tr>
+<th>Anonymous Volume</th>
+<th>Named Volume</th>
+<th>Bind Mount</th>
+</tr>
+<tr>
+<td>docker run -v /app/data</td>
+<td>docker run -v data:/app/data</td>
+<td>docker run -v path/to/code:/app/data</td>
+</tr>
+</table>
+
 </i>
