@@ -190,8 +190,25 @@ Project: data-volumes-starting-setup
 This app creates file with title name and content of file will be feedback
 docker build
 
+### Type of External Data Storages
+
+<ul>
+<li>Volumes(Mananged By Docker)</li>
+<li>Bind Mounts(Managed By You)</li>
+</ul>
+
 #### Volumes
 
-Volumes are folders on your local machine which are mounted into containers.
+Volumes are folders on your local machine which are mounted into containers.</br>
+
+<h5>docker volume ls</h5>
+1)Anonymous Volumes</br>
+When container shuts down, anonymous volume will be deleted
+</br>
+</br>
+2)Named Volumes</br>
+When container shuts down, named volume is not deleted and data is persisted and once the container starts again the same data from that volume can be used.</br>
+CMD to create named volume:</br>
+<h5>docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volume</h5>
 
 </i>

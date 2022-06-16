@@ -11,4 +11,7 @@ The file can be accessed with url
 the file is created inside container but not in our local system. as soon as the container is removed then the files are also lost.</br>
 
 Only VOLUME ["/app/feedback"] breaks the code so have to update the js code.</br>
-But still only this does not solve our main issue.
+But still only this does not solve our main issue.</br>
+
+Named Volume solves the above issue</br>
+docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volume
