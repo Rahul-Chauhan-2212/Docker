@@ -218,4 +218,11 @@ To remove volumes:
 <li><h5>docker volume prune</h5></li>
 </ul>
 
+### Bind Mounts
+
+Used to persist editable data</br>
+it is a volume inside your local machine which watches the changes inside the folder and copes it to container.
+
+<h5>docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app" -v /app/node_modules feedback-node:volume</h5>
+
 </i>
