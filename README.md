@@ -238,9 +238,22 @@ it is a volume inside your local machine which watches the changes inside the fo
 <td>docker run -v data:/app/data</td>
 <td>docker run -v path/to/code:/app/data</td>
 </tr>
-<tr><td>Created specifically for single container</td></tr>
-<tr><td>Survives container shutdown/restarts until --rm is used</td></tr>
-<tr><td>Can not be shared across containers</td></tr>
+<tr>
+<td>Created specifically for single container</td>
+<td>Created in general-not tied to any container</td>
+</tr>
+<tr>
+<td>Survives container shutdown/restarts until --rm is used</td>
+<td>Survives containe shutdown/re-start/removal via docker CLI</td>
+</tr>
+<tr>
+<td>Can not be shared across containers</td>
+<td>Can be shared across containers</td>
+</tr>
+<tr>
+<td>As it is anonymous. It can't be re-used even for same image.</td>
+<td>Can be re-used for same container(across re-starts)</td>
+</tr>
 </table>
 
 </i>
