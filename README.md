@@ -211,4 +211,11 @@ When container shuts down, named volume is not deleted and data is persisted and
 CMD to create named volume:</br>
 <h5>docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volume</h5>
 
+To remove volumes:
+
+<ul>
+<li><h5>docker volume rm volumeName</h5></li>
+<li><h5>docker volume prune</h5></li>
+</ul>
+
 </i>
