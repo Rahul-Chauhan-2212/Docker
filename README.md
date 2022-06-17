@@ -260,4 +260,8 @@ it is a volume inside your local machine which watches the changes inside the fo
 </tr>
 </table>
 
+###### Making Volumes Read-Only
+By default all the volumes are read-write. Which means bind mounts can change our host machine code from the container which does not want. So for this <b>ro</b> is used in bind mounts
+<h5>docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app:ro" -v /app/temp -v /app/node_modules feedback-node:volume</h5>
+
 </i>
