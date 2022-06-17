@@ -1,5 +1,5 @@
 <i>
-# Docker
+<h1>Docker</h1>
 
 ### Docker is a container management service. The keywords of Docker are develop, ship and run anywhere. The whole idea of Docker is for developers to easily develop applications, ship them into containers which can then be deployed anywhere.
 
@@ -273,5 +273,9 @@ By default all the volumes are read-write. Which means bind mounts can change ou
 <h5>docker volume rm volumeName</h5>
 <h5>docker volume prune</h5>
 <h5>docker volume inspect volumeName</h5>
+
+###### Ignoring files and folders while building images
+
+<b>.dockerignore</b> file
 
 </i>
