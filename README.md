@@ -221,7 +221,7 @@ To remove volumes:
 ### Bind Mounts
 
 Used to persist editable data</br>
-it is a volume inside your local machine which watches the changes inside the folder and copes it to container.
+it is a volume inside your local machine which watches the changes inside the folder and copies it to container.
 
 <h5>docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app" -v /app/node_modules feedback-node:volume</h5>
 
@@ -277,5 +277,25 @@ By default all the volumes are read-write. Which means bind mounts can change ou
 ###### Ignoring files and folders while building images
 
 <b>.dockerignore</b> file
+
+#### ARGuments & ENVironment variables
+
+Docker supports build-time ARGuments and run-time ENVironment variables
+
+<ol>
+<li>
+<h4>ARG</h4>
+Available inside of Dockerfile, not accessible in cmd or any application code</br>
+Set on image build(docker build) via --build-arg</br>
+<h5>docker run -d -p 3000:8000 --rm --name feedback-app --env PORT=8000 -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app:ro"  -v /app/node_modules -v /app/temp feedback-node:env</h5>
+<h5>docker run -d -p 3000:8000 --rm --name feedback-app --env-file ./.env -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app"  -v /app/node_modules -v /app/temp feedback-node:env</h5> via .env file
+</li>
+<li>
+<h4>ENV</h4>
+Available inside of a Dockerfile and application code</br>
+Set via ENV in Dockerfile or --env on docker run
+</li>
+
+</ol>
 
 </i>
