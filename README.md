@@ -287,13 +287,14 @@ Docker supports build-time ARGuments and run-time ENVironment variables
 <h4>ARG</h4>
 Available inside of Dockerfile, not accessible in cmd or any application code</br>
 Set on image build(docker build) via --build-arg</br>
-<h5>docker run -d -p 3000:8000 --rm --name feedback-app --env PORT=8000 -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app:ro"  -v /app/node_modules -v /app/temp feedback-node:env</h5>
-<h5>docker run -d -p 3000:8000 --rm --name feedback-app --env-file ./.env -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app"  -v /app/node_modules -v /app/temp feedback-node:env</h5> via .env file
+<h5>docker build -t feedback-node:dev --build-arg DEFAULT_PORT=8000  .</h5>
 </li>
 <li>
 <h4>ENV</h4>
 Available inside of a Dockerfile and application code</br>
 Set via ENV in Dockerfile or --env on docker run
+<h5>docker run -d -p 3000:8000 --rm --name feedback-app --env PORT=8000 -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app:ro"  -v /app/node_modules -v /app/temp feedback-node:env</h5>
+<h5>docker run -d -p 3000:8000 --rm --name feedback-app --env-file ./.env -v feedback:/app/feedback -v "C:/Users/RAHUL CHAUHAN/Documents/Docker Codes/Docker/data-volumes-starting-setup:/app"  -v /app/node_modules -v /app/temp feedback-node:env</h5> via .env file
 </li>
 
 </ol>
