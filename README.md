@@ -302,19 +302,28 @@ Set via ENV in Dockerfile or --env on docker run
 ### Networking(Cross-) Container Communication
 
 <ol>
-<li><h5>Container and WWW communication</h5</br>
+<li><h5>Container and WWW communication</h5>
 Container can communicate with WWW without any extra coding or configurationn.
 </li>
-<li><h5>Container and Local Host Machine Communication</h5></br>
+<li><h5>Container and Local Host Machine Communication</h5>
 for container and localhost communication, we need to change the server ip inside our docker images to host.docker.internal</br>
 in local case : localhost  --> host.docker.internal
 </li>
-<li><h5>Container to container communication</h5></br>
+<li><h5>Container to container communication</h5>
 There can be two approaches:</br>
 <ul>
 <li>Basic Solution</br>
 Look for the ip address of the container to be used using <b>docker container inspect containername</b></br>
 then use this ip in the image of the main app.
+</li>
+<li>Docker Networks</br>
+Create Docker network</br>
+<b>docker network create favorite-network</b>
+Run the container with network tag</br>
+<b>docker run -d --name mongodb --network favorite-network mongo</b>
+Build the new image with ip of the mongodb as containername and start it with network tag</br>
+<b>docker run -d --rm --name favorites -p 3000:3000 --network favorite-network  favorites-node</br>
+In this case, the container communicates via Container network and container name.
 </li>
 </ul>
 </li>
