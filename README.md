@@ -309,8 +309,16 @@ Container can communicate with WWW without any extra coding or configurationn.
 for container and localhost communication, we need to change the server ip inside our docker images to host.docker.internal</br>
 in local case : localhost  --> host.docker.internal
 </li>
-<li>Container to container communication</li>
+<li>Container to container communication</br>
+There can be two approaches:</br>
+<ul>
+<li>Basic Solution</br>
+Look for the ip address of the container to be used using <b>docker container inspect containername</b></br>
+then use this ip in the image of the main app.
+</li>
+</ul>
+</li>
 </ol>
-<span Note: app tested --> networks-starting-setup</span>
+<span>app used: <b>networks-starting-setup</b></span>
 
 </i>
