@@ -318,11 +318,11 @@ then use this ip in the image of the main app.
 </li>
 <li>Docker Networks</br>
 Create Docker network</br>
-<b>docker network create favorite-network</b>
+<b>docker network create favorite-network</b></br>
 Run the container with network tag</br>
-<b>docker run -d --name mongodb --network favorite-network mongo</b>
+<b>docker run -d --name mongodb --network favorite-network mongo</b></br>
 Build the new image with ip of the mongodb as containername and start it with network tag</br>
-<b>docker run -d --rm --name favorites -p 3000:3000 --network favorite-network  favorites-node</br>
+<b>docker run -d --rm --name favorites -p 3000:3000 --network favorite-network  favorites-node</b></br>
 In this case, the container communicates via Container network and container name.
 </li>
 </ul>
