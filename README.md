@@ -305,9 +305,12 @@ Set via ENV in Dockerfile or --env on docker run
 <li>Container and WWW communication</br>
 Container can communicate with WWW without any extra coding or configurationn.
 </li>
-<li>Container and Local Host Machine Communication</li>
+<li>Container and Local Host Machine Communication</br>
+for container and localhost communication, we need to change the server ip inside our docker images to host.docker.internal</br>
+in local case : localhost  --> host.docker.internal
+</li>
 <li>Container to container communication</li>
 </ol>
-Note: app tested --> networks-starting-setup
+<span Note: app tested --> networks-starting-setup</span>
 
 </i>
