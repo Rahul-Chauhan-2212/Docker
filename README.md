@@ -302,9 +302,12 @@ Set via ENV in Dockerfile or --env on docker run
 ### Networking(Cross-) Container Communication
 
 <ol>
-<li>Container and WWW communication</li>
+<li>Container and WWW communication</br>
+Container can communicate with WWW without any extra coding or configurationn.
+</li>
 <li>Container and Local Host Machine Communication</li>
 <li>Container to container communication</li>
 </ol>
+Note: app tested --> networks-starting-setup
 
 </i>
