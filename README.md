@@ -302,14 +302,14 @@ Set via ENV in Dockerfile or --env on docker run
 ### Networking(Cross-) Container Communication
 
 <ol>
-<li>Container and WWW communication</br>
+<li><h5>Container and WWW communication</h5</br>
 Container can communicate with WWW without any extra coding or configurationn.
 </li>
-<li>Container and Local Host Machine Communication</br>
+<li><h5>Container and Local Host Machine Communication</h5></br>
 for container and localhost communication, we need to change the server ip inside our docker images to host.docker.internal</br>
 in local case : localhost  --> host.docker.internal
 </li>
-<li>Container to container communication</br>
+<li><h5>Container to container communication</h5></br>
 There can be two approaches:</br>
 <ul>
 <li>Basic Solution</br>
