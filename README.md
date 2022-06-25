@@ -40,7 +40,7 @@ If your admin account is different to your user account, you must add the user t
 <li>docker stop containerName  ---> To stop docker image/container</li>
 </ul>
 
-### Images vs Containers
+## Images vs Containers
 
 Containers--> The running "unit of software" / running instance of Image
 Multiple containers can be created based on one image
@@ -299,7 +299,7 @@ Set via ENV in Dockerfile or --env on docker run
 
 </ol>
 
-### Networking(Cross-) Container Communication
+## Networking(Cross-) Container Communication
 
 <ol>
 <li><h5>Container and WWW communication</h5>
@@ -330,7 +330,7 @@ In this case, the container communicates via Container network and container nam
 </ol>
 <span>app used: <b>networks-starting-setup</b></span>
 
-### Building Multi-container Applications with Docker
+## Building Multi-container Applications with Docker
 
 <span>app used: <b>multi-container-starting-setup</b></span>
 
