@@ -361,5 +361,9 @@ In this case, the container communicates via Container network and container nam
 <li>Volumes, Bind Mounts and Polishing to NodeJs Container
 <h6>docker run -v C:/MyCodes/Docker/multi-containers-starting-setup/backend:/app -v logs:/app/logs -v /app/node_modules -e MONGODB_USERNAME=rahul -e MONGODB_PASSWORD=rahul --name goals-backend --rm -d -p 80:80 --network goals goals-node</h6>
 </li>
+<li>Live Source Code Updates for React Container with Bind Mounts
+<h6>docker run --name goals-frontend -v C:/MyCodes/Docker/multi-containers-starting-setup/frontend/src:/app/src --rm -d -p 3000:3000 goals-react</h6>
+</li>
 </ol>
+
 </i>
