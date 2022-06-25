@@ -358,5 +358,8 @@ In this case, the container communicates via Container network and container nam
 <h6>docker run --name mongodb --rm -d -v data:/data/db --network goals mongo</h6>
 <h6>docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME="rahul" -e MONGO_INITDB_ROOT_PASSWORD="rahul" --rm -d -v data:/data/db --network goals mongo</h6>
 </li>
+<li>Volumes, Bind Mounts and Polishing to NodeJs Container
+<h6>docker run -v C:/MyCodes/Docker/multi-containers-starting-setup/backend:/app -v logs:/app/logs -v /app/node_modules -e MONGODB_USERNAME=rahul -e MONGODB_PASSWORD=rahul --name goals-backend --rm -d -p 80:80 --network goals goals-node</h6>
+</li>
 </ol>
 </i>
