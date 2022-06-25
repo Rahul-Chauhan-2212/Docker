@@ -350,9 +350,13 @@ In this case, the container communicates via Container network and container nam
 <li>Adding Docker networks for efficient cross-container communication
 <h6>docker network ls</h6>
 <h6>docker network create goals</h6>
-<h6>docker run --name mongodb --rm -d --network goals  mongo</h6>
+<h6>docker run --name mongodb --rm -d --network goals mongo</h6>
 <h6>docker run --name goals-backend --rm -d -p 80:80 --network goals  goals-node</h6>
 <h6>docker run --name goals-frontend --rm -d -p 3000:3000 goals-react</h6>
+</li>
+<li>Adding Data persistence and authentication to mongodb with volumes
+<h6>docker run --name mongodb --rm -d -v data:/data/db --network goals mongo</h6>
+<h6>docker run --name mongodb -e MONGO_INITDB_ROOT_USERNAME="rahul" -e MONGO_INITDB_ROOT_PASSWORD="rahul" --rm -d -v data:/data/db --network goals mongo</h6>
 </li>
 </ol>
 </i>
