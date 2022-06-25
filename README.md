@@ -376,7 +376,7 @@ Docker Compose file Reference<h5>https://docs.docker.com/compose/compose-file/co
 <ol>
 <li>Docker Compose does not replace Dockerfiles for custom images</li>
 <li>Docker Compose also does not replace images and containers concept</li>
-<li>Docker Compose is not suited for managing multiple containers on differnt hosts</li>
+<li>Docker Compose is not suited for managing multiple containers on different hosts</li>
 </ol>
 
 #### Docker Compose Up and Down
@@ -387,6 +387,8 @@ Docker Compose file Reference<h5>https://docs.docker.com/compose/compose-file/co
 <li>docker-compose up -d</li>
 <li>docker-compose down</li>
 <li>docker-compose down -v</li>
+<li>docker-compose build</li>
+<li>docker-compose up --build</li>
 </ul>
 
 </i>
