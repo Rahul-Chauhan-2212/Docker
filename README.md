@@ -333,17 +333,25 @@ In this case, the container communicates via Container network and container nam
 ### Building Multi-container Applications with Docker
 
 <span>app used: <b>multi-container-starting-setup</b></span>
+
 <ol>
 <li>Dockerize mongodb service
 
 <h6>docker run --name mongodb --rm -d -p 27017:27017 mongo</h6></li>
 
-<li>Dockerize Backend servie
+<li>Dockerize Backend service
 <h6>docker build -t goals-node .</h6>
 <h6>docker run --name goals-backend --rm -d -p 80:80 goals-node</h6></li>
 
-<li>Dockerize Frontend servie
+<li>Dockerize Frontend service
 <h6>docker build -t goals-react .</h6>
+<h6>docker run --name goals-frontend --rm -d -p 3000:3000 goals-react</h6>
+</li>
+<li>Adding Docker networks for efficient cross-container communication
+<h6>docker network ls</h6>
+<h6>docker network create goals</h6>
+<h6>docker run --name mongodb --rm -d --network goals  mongo</h6>
+<h6>docker run --name goals-backend --rm -d -p 80:80 --network goals  goals-node</h6>
 <h6>docker run --name goals-frontend --rm -d -p 3000:3000 goals-react</h6>
 </li>
 </ol>
