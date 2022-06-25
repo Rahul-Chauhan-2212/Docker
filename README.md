@@ -366,4 +366,27 @@ In this case, the container communicates via Container network and container nam
 </li>
 </ol>
 
+## Docker Compose : Elegand Multi-Container Orchestration
+
+Used to run Docker Orchestration commands(build,run,start,stop etc..) using one configuration file. The docker commands are very big and for a multi-containers setup having 10's of containers, it is very difficult to run all the very big commands. So in this case, Docker Compose helps us.
+
+<h3>docker-compose.yaml</h3>
+Docker Compose file Reference<h5>https://docs.docker.com/compose/compose-file/compose-file-v3/</h5>
+<h5>Note:</h5>
+<ol>
+<li>Docker Compose does not replace Dockerfiles for custom images</li>
+<li>Docker Compose also does not replace images and containers concept</li>
+<li>Docker Compose is not suited for managing multiple containers on differnt hosts</li>
+</ol>
+
+#### Docker Compose Up and Down
+
+<ul>
+<li>docker-compose --version</li>
+<li>docker-compose up</li>
+<li>docker-compose up -d</li>
+<li>docker-compose down</li>
+<li>docker-compose down -v</li>
+</ul>
+
 </i>
