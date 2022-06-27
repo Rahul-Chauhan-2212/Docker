@@ -368,7 +368,8 @@ In this case, the container communicates via Container network and container nam
 
 ## Docker Compose : Elegand Multi-Container Orchestration
 
-Used to run Docker Orchestration commands(build,run,start,stop etc..) using one configuration file. The docker commands are very big and for a multi-containers setup having 10's of containers, it is very difficult to run all the very big commands. So in this case, Docker Compose helps us.
+Used to run Docker Orchestration commands(build,run,start,stop etc..) using one configuration file. The docker commands are very big and for a multi-containers setup having 10's of containers, it is very difficult to run all the very big commands. So in this case, Docker Compose helps us.</br>
+Docker compose creates a default network and all the containers(services) written in docker-compose.yaml file lie under same network. When we stop docker container using docker-compose down all the containers are removed, so we don't need to specify alternative of --rm in yaml file.
 
 <h3>docker-compose.yaml</h3>
 Docker Compose file Reference<h5>https://docs.docker.com/compose/compose-file/compose-file-v3/</h5>
@@ -391,4 +392,19 @@ Docker Compose file Reference<h5>https://docs.docker.com/compose/compose-file/co
 <li>docker-compose up --build</li>
 </ul>
 
+#### Utility Containers
+
+Without installing we can create projects on our local machine, using utility containers
+
+<h6>docker exec -it  containerName npm init</h6>
+<h6>docker run -it node npm init</h6>
+
+<h5>docker run -it -v C:/MyCodes/Docker/utility-containers:/app node-util npm init</h5>
+<h5>docker run -it -v C:/MyCodes/Docker/utility-containers:/app node-util npm install</h5>
+Utilizing Entry point
+<h5>docker run -it -v C:/MyCodes/Docker/utility-containers:/app node-util  init</h5>
+<h5>docker run -it -v C:/MyCodes/Docker/utility-containers:/app node-util install express --save</h5>
+Using Docker Compose for Utility containers
+<h6>docker-compose run --rm npm init</h6>
+<h6>docker-compose run --rm npm install express --save</h6>
 </i>
