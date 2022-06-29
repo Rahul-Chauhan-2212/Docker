@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  server:
+    image: 'ngnix:stable-alpine'
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/ngnix/nginx.conf:ro
+  php:
+    build: 
+      context: ./Dockerfiles
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html:delegated
+  mysql:
+    image: mysql:5.7
+  # composer:
+  # artisan:
+  # npm:
