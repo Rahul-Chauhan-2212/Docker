@@ -407,4 +407,25 @@ Utilizing Entry point
 Using Docker Compose for Utility containers
 <h6>docker-compose run --rm npm init</h6>
 <h6>docker-compose run --rm npm install express --save</h6>
+
+## Deploying Docker Containers
+
+<h4>Development to Production: Things to watch out for</h4>
+<ol>
+<li>Bind Mounts should not be used in Production</li>
+<li>Containerized apps might need a build step like(React, Angular)</li>
+<li>Multi Container Projects might need to be split across multiple host/remote machines</li>
+<li>Trade-off between control and responsibility might be worth it.</li>
+
+<h4>Possible Deployment Approach</h4>
+<h3>Development Machine --> Push --> Container Registry --> Pull --> Remote/Host Machine</h3>
+
+<h6>Hosting Providers</h6>
+<ul>
+<li>Amazon AWS</li>
+<li>Microsoft Azure</li>
+<li>Google Cloud</li>
+</ul>
+</ol>
+
 </i>
