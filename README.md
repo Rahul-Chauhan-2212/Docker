@@ -416,6 +416,7 @@ Using Docker Compose for Utility containers
 <li>Containerized apps might need a build step like(React, Angular)</li>
 <li>Multi Container Projects might need to be split across multiple host/remote machines</li>
 <li>Trade-off between control and responsibility might be worth it.</li>
+</ol>
 
 <h4>Possible Deployment Approach</h4>
 <h3>Development Machine --> Push --> Container Registry --> Pull --> Remote/Host Machine</h3>
@@ -426,6 +427,31 @@ Using Docker Compose for Utility containers
 <li>Microsoft Azure</li>
 <li>Google Cloud</li>
 </ul>
-</ol>
+
+<h6>EC2 Instance</h6>
+<ul>
+<li>Launch EC2 instance</li>
+<li>Connect EC2 using .ppk or .pem file</li>
+<li>Make ssh 22 port availabe in inbound rule for security group</li>
+</ul>
+
+<h6>Installing Docker on AWS EC2 Instance</h6>
+<ul>
+<li>sudo yum update -y</li>
+<li>sudo amazon-linux-extras install docker</li>
+ </ul>
+
+<h6>Pushing our image to Docker Registry(Docker Hub)</h6>
+<ul>
+<li>docker build -t node-dep-example-1 .</li>
+<li>docker tag node-dep-example-1 rchauhan9102/node-example-1</li>
+<li>docker push rchauhan9102/node-example-1</li>
+</ul>
+
+<h6>Running and Publishing the App on EC2</h6>
+ <ul>
+ <li>docker run -d --rm -p 80:80 rchauhan9102/node-example-1</li>
+ <li>Make http 80 port availabe in inbound rule for security group</li>
+ </ul>
 
 </i>
