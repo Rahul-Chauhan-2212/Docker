@@ -454,4 +454,22 @@ Using Docker Compose for Utility containers
  <li>Make http 80 port availabe in inbound rule for security group</li>
  </ul>
 
+ <h6>Managing and Updating Container/Image</h6>
+ <ul>
+ <li>Build New Image Locally</li>
+ <li>Tag the new image</li>
+ <li>Push Image to Docker Registry</li>
+ <li>In EC2, Stop the running container</li>
+ <li>Docker pull the latest image</li>
+ <li>Run the container using the latest container</li>
+ </ul>
+
+ <h5>Disadvantage of Current Approach of Deployment</h5>
+ <ul>
+ <li>This is a "Do it yourself" approach.</li>
+ <li>Keep essential softwares updated.</li>
+ <li>Manage network and security group firewall.</li>
+ <li>SSHing to EC2 instance can be annoying.</li>
+ </ul>
+
 </i>
