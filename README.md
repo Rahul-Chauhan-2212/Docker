@@ -488,7 +488,14 @@ Using Docker Compose for Utility containers
 <h5>Updating Managed Containers</h5>
 <h6>In the ECS, create new task for revision.</h6>
 
-<h5>Preparing a multi-container app in AWS ECS</h5>
+<h5>Deploying a multi-container app in AWS ECS</h5>
+<ul>
+<li>Create ECS Cluster.</li>
+<li>Create Service.</li>
+<li>Create Task. Inside that add containers</li>
+<li>Add Load Balancer</li>
+<li>Add EFS volumes</li>
+</ul>
 
 
 </i>
