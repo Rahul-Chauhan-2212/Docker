@@ -23,7 +23,8 @@
 
 #### Install Docker Desktop on Windows
 
-Download Docker from link https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe
+Download Docker from link 
+<a href="https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe">Install Docker on Windows</a>
 
 Note: When prompted, ensure the Use WSL 2 instead of Hyper-V option on the Configuration page is selected or not depending on your choice of backend.
 
@@ -372,7 +373,7 @@ Used to run Docker Orchestration commands(build,run,start,stop etc..) using one 
 Docker compose creates a default network and all the containers(services) written in docker-compose.yaml file lie under same network. When we stop docker container using docker-compose down all the containers are removed, so we don't need to specify alternative of --rm in yaml file.
 
 <h3>docker-compose.yaml</h3>
-Docker Compose file Reference<h5>https://docs.docker.com/compose/compose-file/compose-file-v3/</h5>
+<a href="https://docs.docker.com/compose/compose-file/compose-file-v3/">Docker Compose file Reference</a>
 <h5>Note:</h5>
 <ol>
 <li>Docker Compose does not replace Dockerfiles for custom images</li>
@@ -471,5 +472,21 @@ Using Docker Compose for Utility containers
  <li>Manage network and security group firewall.</li>
  <li>SSHing to EC2 instance can be annoying.</li>
  </ul>
+
+ <h6>Deployment with AWS ECS:A Managed Docker Container Service</h6>
+ <h5>Create ECS service</h5>
+ This will create a container service so without any server configuration like EC2, we can access our application.
+ <ul>
+ <li>Define Container</li>
+ <li>Define Task Definition</li>
+ <li>Define Service</li>
+ <li>Define Cluster</li>
+ </ul>
+
+ <a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html">Load Balancing</a>
+
+<h5>Updating Managed Containers</h5>
+<h6>In the ECS, create new task for revision.</h6>
+
 
 </i>
